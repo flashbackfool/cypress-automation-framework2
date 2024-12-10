@@ -12,3 +12,6 @@ When('I click on the contact us button', () => {
     .invoke("removeAttr", "target")
     .click();
 })
+
+
+//To be filled as well
