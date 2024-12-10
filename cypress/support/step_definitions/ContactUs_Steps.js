@@ -7,25 +7,28 @@ When('I type a first name', () => {
 })
 
 When('I type a last name', () => {
-
+    cy.get('[name="last_name"]')
+    .type('Blogs')
 })
 
 When('I enter an email', () => {
-
+    cy.get('[name="email"]')
+    .type("joe_blogs123@mail.com")
 })
 
 When('I type a comment', () => {
-
+    cy.get('textarea[name="message"]')
+    .type("Hello World!")
 })
 
 When('I click on the submit button', () => {
-
+    cy.get('[type="submit"]')
+    .click()
 })
 
 Then('I should be presented with a successful contact us submission message', () => {
-
+    cy.get('h1')
+    .should('contain.text', 'Thank You for your Message!')
 })
 
-// To be filled
-//2nd comment to be achieved
-//3rd comment to be pushed though
+//Deleted comments as well bro
